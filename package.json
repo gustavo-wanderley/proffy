@@ -1,0 +1,23 @@
+{
+  "name": "next-level-week",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev":"nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavo-wanderley/next-level-week.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gustavo-wanderley/next-level-week/issues"
+  },
+  "homepage": "https://github.com/gustavo-wanderley/next-level-week#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
