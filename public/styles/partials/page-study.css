@@ -3,6 +3,11 @@
     height: 100vh;
 }
 
+#page-study main .no-results {
+    max-width: 30rem;
+    margin: 12rem auto;
+    text-align: center;
+}
 
 #search-teachers {
     margin-top: 3.2rem;
@@ -111,6 +116,7 @@
     color: var(--color-primary);
     display: block;
 }
+
 
 .teacher-item footer .button {
     width: 20rem;

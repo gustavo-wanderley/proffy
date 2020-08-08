@@ -22,7 +22,6 @@
     <script src="/scripts/addField.js" defer></script>
 
 </head>
-
 <body id="page-give-classes">
     <div id="container">
         <header class="page-header">
@@ -31,7 +30,6 @@
                     <img src="/images/icons/back.svg" alt="voltar"></a>
                 <img src="/images/logo.svg" alt="proffy">
             </div>
-
             <div class="header-content">
                 <strong>
                     Que incrível que você quer dá aulas
@@ -43,7 +41,7 @@
             </div>
         </header>
         <main>
-            <form id="create-class">
+            <form id="create-class" method="POST" action="/save-classes">
                 <fieldset>
                     <legend>Seus dados</legend>
                     <div class="input-block">

@@ -4,7 +4,8 @@ const nunjucks = require("nunjucks")
 const {
     pageLanding,
     pageStudy,
-    pageGiveClasses
+    pageGiveClasses,
+    saveClasses
 } = require("./pages");
 
 nunjucks.configure(
@@ -16,9 +17,11 @@ nunjucks.configure(
 )
 
 
-server.use(express.static("public"))
+server.use(express.urlencoded({ extended: true }))
+    .use(express.static("public"))
     .get("/", pageLanding)
     .get("/study", pageStudy)
     .get("/give-classes", pageGiveClasses)
+    .post("/save-classes", saveClasses)
     .listen(8080);
 
