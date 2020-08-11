@@ -28,8 +28,8 @@ class Classes(models.Model):
     ]
 
     subject = models.CharField(choices=SUBJECTS, max_length=4)
-    cost = models.DecimalField()
-    proffy = models.OneToOneRel(Proffys, on_delete=models.CASCADE)
+    cost = models.DecimalField(decimal_places=1, max_digits=5)
+    proffy = models.OneToOneField(Proffys, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.subject
@@ -48,16 +48,14 @@ class Schedule(models.Model):
     ]
 
     classes = models.ForeignKey(Classes, on_delete=models.CASCADE)
-    weekday = models.CharField(max_length=3, cascade=WEEKDAYS)
+    weekday = models.CharField(max_length=3, choices=WEEKDAYS)
     time_from = models.IntegerField()
     time_to = models.IntegerField()
 
     def __str__(self):
         return self.classes.subject
 
-
     @classmethod
     def convertHoursToMinutes(cls, time):
         hour, minutes = int(time.split(":"))
         return (hour * 60) + minutes
-
